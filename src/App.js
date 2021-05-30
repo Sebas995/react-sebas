@@ -1,7 +1,13 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Cards from "./components/Cards"
 
-function App() {
+const App = () => {
+  return <Cards/>
+  //return <Contador inicial={5} factor={3}/>
+} 
+
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +26,6 @@ function App() {
       </header>
     </div>
   );
-}
+} */
 
 export default App;
