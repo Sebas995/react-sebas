@@ -1,13 +1,24 @@
-//import logo from './logo.svg';
-import './App.css';
-import Cards from "./components/Cards"
+import React from 'react';
+import Calculadora from './components/Calculadora';
 
 const App = () => {
-  return <Cards/>
-  //return <Contador inicial={5} factor={3}/>
-} 
+  return (
+      <div className="container text-center">
+      <h1>Calculadora PWA</h1>
+      <hr/>
+        <Calculadora/>
+      </div>
+  )
+}
 
-/* function App() {
+export default App;
+
+
+/* import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +37,7 @@ const App = () => {
       </header>
     </div>
   );
-} */
+}
 
 export default App;
+ */
