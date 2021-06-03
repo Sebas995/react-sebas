@@ -4,7 +4,6 @@ const Calculadora = () => {
 
     return (
         <>
-            <hr />
             <NumberInput/>
         </>
     )

@@ -1,13 +1,19 @@
-import React from 'react';
-import Calculadora from './components/Calculadora';
+// import React from 'react';
+// import State from './components/State';
+// import Calculadora from './components/Calculadora';
+import Effect from './components/Effect';
 
 const App = () => {
   return (
       <div className="container text-center">
-      <h1>Calculadora PWA</h1>
-      <hr/>
-        <Calculadora/>
+        <Effect/>
       </div>
+      // <State/>
+      // <div className="container text-center">
+      // <h1>Calculadora PWA</h1>
+      // <hr/>
+      //   <Calculadora/>
+      // </div>
   )
 }
 
