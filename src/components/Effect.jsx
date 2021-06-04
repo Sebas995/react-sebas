@@ -1,24 +1,17 @@
-import {useState, useEffect} from 'react';
+import {useEffect, useState} from 'react';
 
 const Effect = () => {
 
-    const [users, setUsers] = useState([]);
+    const [state, setState] = useState(0);
 
     useEffect(() => {
-        const getUsuarios = async () => {
-            //Son promesas Estas se usan de manera asyncrona (Leer mas de esto)
-            const res = await fetch("https://jsonplaceholder.typicode.com/users");
-            const data = await res.json();
-    
-            setUsers(data);
-        };
+        //El return el nos useEffect sirve para no crear bluckles
+        return () => {
 
-        getUsuarios();
-    },[]);
-    //console.log(users)
+        };
+    }, [state])
 
     const handleSubmit = (e) => {
-
         //Evita que se recargue la pagina cuando el form tien un submit preventDefault()
         e.preventDefault();
     };
