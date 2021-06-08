@@ -1,20 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import Dato from './Dato';
 
 const Memorize = () => {
 
     const [counter, setCounter] = useState(0);
     const [view, setView] = useState(true)
+    const pesado = (iter) => {
+
+        for (let i = 0; i < iter; i++)
+            console.log("procesando");
+
+        return "Fin del proceso";
+    };
 
     const handleClick = () => {
         setCounter(counter + 1);
     };
+
+    const pesadoMemo = useMemo(() => pesado(counter), [counter]);
 
     return (
         <>
           <h1>Memorizes: <Dato value={counter}/></h1>
           <hr />
 
+          {pesadoMemo}
+          
           <button onClick={handleClick}>+1</button>
           <button onClick={() => setView(!view)}>Ver/Quitar</button>
         </>
